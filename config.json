@@ -1,0 +1,6 @@
+{
+    "webhook": {
+        "enabled": false,
+        "url": "put webhook url this and replace false to true"
+    }
+}
